@@ -1,0 +1,35 @@
+
+ 
+    <title>Заказ</title>
+    <script>
+        function calc() {
+    var type_design = document.getElementById("type_design");
+    var count = document.getElementById("count");
+    var result = document.getElementById("result");
+ 
+    iType = parseInt(type_design.options[type_design.selectedIndex].value);
+    iSquare = parseInt(count.value);
+    
+    if (iType < 100) {result.innerHTML = iType;}
+    else {result.innerHTML = (iType+((iSquare+110)*20));}
+}
+    </script>
+</head>
+ 
+<body>
+ 
+ <b>Тип обьекта</b><br/>
+        <select onchange="calc()" id="type_design">
+            <option value="0">Выбрать</option>
+            <option value="350">Офисы</option>
+            <option value="200">Общественные помещения</option>
+            <option value="300">Торговые помещения</option>
+        <option value="400">Производственные здания и предприятия</option>
+            <option value="500">Дома и Коттеджи</option>
+        </select>
+  <br/>
+        Введите площадь объекта (только цифра):<input type="text" id="count" value="0" onblur="calc()" />
+        <div>Примерная стоимость проведения измерений: <span id="result">0</span>
+ 
+</body>
+</html>
