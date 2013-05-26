@@ -1,0 +1,80 @@
+<html>
+<head>
+<title> McDonalds </title>
+<h2><marquee>Макдональдс - ресторан, где будут удовлетворены все ваши гастрономические потребности, а конечный счет приятно удивит!</marquee></h2>
+<p align="center"><FONT SIZE=+3 COLOR="Broun">Меню и цены McDonalds<br>I love it</FONT>  
+<HR size=2 width="70%"> 
+<HR size=2 width="70" color="red" > 
+<script language="JavaScript">
+function touch()
+{
+alert("I was touched!");
+}
+ 
+function calculate()
+{
+ 
+var цена=parseFloat(document.myform.цена.value);
+ 
+var количество=parseFloat(document.myform.количество.value);
+ 
+if(document.myform.McDonalds[0].checked)
+document.myform.result.value="Заказ составляет="+(50*количество);
+else
+if(document.myform.McDonalds[1].checked)
+document.myform.result.value="Заказ составляет="+(300*количество);
+else
+if(document.myform.McDonalds[2].checked)
+document.myform.result.value="Заказ составляет="+(100*количество);
+else
+if(document.myform.McDonalds[3].checked)
+document.myform.result.value="Заказ составляет="+(200*количество);
+else
+if(document.myform.McDonalds[4].checked)
+document.myform.result.value="Заказ составляет="+(100*количество);
+else
+document.myform.result.value="Заказ составляет="+(0*количество);
+}
+</script>
+</head>
+<body>
+<form name=myform>
+<p align="center"><FONT SIZE=+2 COLOR="Red">Мы работаем для Вас!</FONT>  
+<Br><Br><Br>
+ 
+<p>Наше меню: </p>
+<p><input type="radio" name="McDonalds" value="rad1">Чизбургер
+<label>
+* <input type=reset value="50 грн" name=цена><br>
+</label>
+   <input type="radio" name="McDonalds" value="rad2">Гамбургер
+<label>
+* <input type=reset value="300 грн" name=цена><br>
+</label>
+   <input type="radio" name="McDonalds" value="rad3">Макчикен
+<label>
+* <input type=reset value="100 грн" name=цена><br>
+</label>
+ <input type="radio" name="McDonalds" value="rad4">Макфлурри Де Люкс
+<label>
+* <input type=reset value="200 грн" name=ціна><br>
+</label>
+ <input type="radio" name="McDonalds" value="rad5">Маффин (шоколадный, с чёрной смородиной)
+<label>
+* <input type=reset value="100 грн" name=цена><br>
+</label></p>
+ 
+<br>
+<input type=reset value="Очистить">
+<br>
+<label>
+Количество -  <input type=text name=количество><br>
+</label><Br>
+ 
+<input type=button value="Стоимость заказа" onClick="calculate();"><br>
+<textarea name=result>
+</textarea>
+ 
+</form>
+</body>
+</html>
